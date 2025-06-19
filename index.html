@@ -3,9 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
+<body class="min-h-screen flex flex-col justify-between">
+    <!-- Bootloader -->
+    <!-- Bootloader -->
+<div id="bootloader" class="fixed inset-0 bg-black flex flex-col items-center justify-center z-50">
+    <!-- Loading Percentage Text -->
+    <div id="loading-text" class="text-white text-5xl font-bold mb-6">0%</div>
+  
+    <!-- Loading Bar -->
+    <div class="loader-bar bg-white h-6 w-40 relative overflow-hidden">
+      <div id="fill-bar" class="fill-bar bg-gray-700 absolute top-0 left-0 h-full w-0"></div>
+    </div>
+  </div>
+  
+  
+    <!-- Hero Section -->
+    <section class="hero-section flex-grow relative flex items-center justify-center py-16 px-4 md:px-8 lg:px-16 text-center" id="">
+        <!-- Decorative Elements -->
+        <div class="decorative-square"></div>
+        <div class="decorative-half-circle"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto">
+            <!-- Rating Badges -->
+            <div class="flex flex-wrap justify-center items-center gap-4 mb-10">
+                <div class="flex items-center text-sm font-semibold bg-white bg-opacity-10 px-3 py-1 rounded-full border border-white border-opacity-20 backdrop-blur-sm">
+                    <span class="text-yellow-400 mr-1">★</span> 4.8 rating on <span class="ml-2 text-white font-bold">Capterra</span>
+                </div>
+                <div class="flex items-center text-sm font-semibold bg-white bg-opacity-10 px-3 py-1 rounded-full border border-white border-opacity-20 backdrop-blur-sm">
+                    <span class="text-yellow-400 mr-1">★</span> 4.8 rating on <span class="ml-2 text-white font-bold">G2</span>
+                </div>
+                <div class="flex items-center text-sm font-semibold bg-white bg-opacity-10 px-3 py-1 rounded-full border border-white border-opacity-20 backdrop-blur-sm">
+                    <span class="text-yellow-400 mr-1">★</span> 350+ reviews on <span class="ml-2 text-white font-bold">Xero</span>
+                </div>
+                <div class="flex items-center text-sm font-semibold bg-white bg-opacity-10 px-3 py-1 rounded-full border border-white border-opacity-20 backdrop-blur-sm">
+                    <span class="text-yellow-400 mr-1">★</span> 550+ reviews on <span class="ml-2 text-white font-bold">Quickbooks</span>
+                </div>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-hero-heading font-extrabold mb-6">
+                Create reports, forecasts, <br class="hidden md:block">dashboards & consolidations
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-xl md:text-2xl font-semibold mb-8 flex items-center justify-center">
+                <span class="mr-2 text-yellow-400">✨</span> Now with AI-insights
+            </p>
+
+            <!-- Call to Action Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out flex items-center">
+                    Start 14-day free trial <span class="ml-2">&gt;</span>
+                </button>
+                <a href="#home" class="text-white text-lg hover:underline flex items-center py-3 px-6">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    </svg>
+                    See what we do
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section: Unparalleled BSS/OSS Capabilities -->
+    <section class="py-16 px-4 md:px-8 lg:px-16 text-center bg-gray-200">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-12">
+                Unparalleled <br> BSS/OSS Capabilities
+            </h2>
+
+            <!-- Tabs/Categories -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="tab-button flex items-center px-6 py-3 bg-white rounded-full shadow-lg text-gray-700 font-semibold text-lg hover:bg-gray-100 transition duration-300" data-tab="billing">
+                    <span class="text-pink-500 text-2xl mr-3 tab-icon">💳</span> BILLING
+                </button>
+                <button class="tab-button flex items-center px-6 py-3 bg-white rounded-full shadow-lg text-gray-700 font-semibold text-lg hover:bg-gray-100 transition duration-300" data-tab="charging">
+                    <span class="text-yellow-500 text-2xl mr-3 tab-icon">⚡</span> CHARGING
+                </button>
+                <button class="tab-button flex items-center px-6 py-3 bg-white rounded-full shadow-lg text-gray-700 font-semibold text-lg hover:bg-gray-100 transition duration-300" data-tab="catalog">
+                    <span class="text-green-500 text-2xl mr-3 tab-icon">📚</span> CATALOG
+                </button>
+                <button class="tab-button flex items-center px-6 py-3 bg-white rounded-full shadow-lg text-gray-700 font-semibold text-lg hover:bg-gray-100 transition duration-300" data-tab="events">
+                    <span class="text-blue-500 text-2xl mr-3 tab-icon">📊</span> EVENTS
+                </button>
+            </div>
+
+            <!-- Content Area for Tabs -->
+            <div id="tab-content-container" class="bg-white rounded-xl shadow-2xl p-8 md:p-12 text-left relative overflow-hidden">
+
+                <!-- Billing Tab Content -->
+                <div id="billing-content" class="tab-content active">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <!-- Left side: Text Content -->
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                                Real-Time <br> Convergent <br> Billing
+                            </h3>
+                            <p class="text-gray-600 text-lg">
+                                Instantaneous, accurate billing across all services <br> and payment methods.
+                            </p>
+                        </div>
+                        <!-- Right side: Placeholder Image/Dashboard Mockup -->
+                        <div class="flex justify-center items-center relative">
+                            <img src="https://placehold.co/600x400/e0e0e0/000000?text=Billing+Dashboard" alt="Billing Dashboard Mockup" class="w-full h-auto rounded-lg shadow-xl">
+                            <!-- These are mock-up elements to illustrate the image content, not actual interactive UI elements -->
+                            <div class="absolute top-10 right-10 bg-white p-4 rounded-lg shadow-md flex items-center">
+                                <span class="text-blue-500 text-xl mr-2">📧</span>
+                                <span class="text-gray-700 font-semibold">EMS</span>
+                            </div>
+                            <div class="absolute bottom-10 left-10 bg-white p-4 rounded-lg shadow-md flex items-center">
+                                <span class="text-green-500 text-xl mr-2">🧾</span>
+                                <span class="text-gray-700 font-semibold">Billing</span>
+                            </div>
+                             <div class="absolute bottom-1/3 right-1/4 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                                <span class="text-gray-700 text-lg font-bold">112 🔥</span>
+                                <span class="text-gray-500 text-sm">Estimated invoices</span>
+                            </div>
+                            <div class="absolute bottom-1/3 right-1/2 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                                <span class="text-gray-700 text-lg font-bold">42 MIN ⏱️</span>
+                                <span class="text-gray-500 text-sm">Estimated duration</span>
+                            </div>
+                            <div class="absolute bottom-1/3 left-1/4 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                                <span class="text-gray-700 text-lg font-bold">17 DAYS 📅</span>
+                                <span class="text-gray-500 text-sm">Current period ends</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charging Tab Content -->
+                <div id="charging-content" class="tab-content">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <!-- Left side: Text Content -->
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                                Dynamic <br> Usage-Based <br> Charging
+                            </h3>
+                            <p class="text-gray-600 text-lg">
+                                Flexible and real-time charging for every service consumption.
+                            </p>
+                        </div>
+                        <!-- Right side: Placeholder Image/Dashboard Mockup -->
+                        <div class="flex justify-center items-center relative">
+                            <img src="https://placehold.co/600x400/e0e0e0/000000?text=Charging+Analytics" alt="Charging Analytics Mockup" class="w-full h-auto rounded-lg shadow-xl">
+                            <div class="absolute top-10 right-10 bg-white p-4 rounded-lg shadow-md flex items-center">
+                                <span class="text-purple-500 text-xl mr-2">📈</span>
+                                <span class="text-gray-700 font-semibold">Usage Monitoring</span>
+                            </div>
+                            <div class="absolute bottom-10 left-10 bg-white p-4 rounded-lg shadow-md flex items-center">
+                                <span class="text-red-500 text-xl mr-2">💲</span>
+                                <span class="text-gray-700 font-semibold">Rate Plans</span>
+                            </div>
+                             <div class="absolute bottom-1/3 right-1/4 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                                <span class="text-gray-700 text-lg font-bold">98% ✅</span>
+                                <span class="text-gray-500 text-sm">Accuracy</span>
+                            </div>
+                            <div class="absolute bottom-1/3 right-1/2 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                                <span class="text-gray-700 text-lg font-bold">5 MIN ⚡</span>
+                                <span class="text-gray-500 text-sm">Processing</span>
+                            </div>
+                            <div class="absolute bottom-1/3 left-1/4 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                                <span class="text-gray-700 text-lg font-bold">Daily 🔄</span>
+                                <span class="text-gray-500 text-sm">Reconciliation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Catalog Tab Content -->
+                <div id="catalog-content" class="tab-content">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <!-- Left side: Text Content -->
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                                Comprehensive <br> Product <br> Catalog
+                            </h3>
+                            <p class="text-gray-600 text-lg">
+                                Manage and launch services with a powerful, unified product catalog.
+                            </p>
+                        </div>
+                        <!-- Right side: Placeholder Image/Dashboard Mockup -->
+                        <div class="flex justify-center items-center relative">
+                            <img src="https://placehold.co/600x400/e0e0e0/000000?text=Product+Catalog" alt="Product Catalog Mockup" class="w-full h-auto rounded-lg shadow-xl">
+                            <div class="absolute top-10 right-10 bg-white p-4 rounded-lg shadow-md flex items-center">
+                                <span class="text-orange-500 text-xl mr-2">📦</span>
+                                <span class="text-gray-700 font-semibold">Product Definitions</span>
+                            </div>
+                            <div class="absolute bottom-10 left-10 bg-white p-4 rounded-lg shadow-md flex items-center">
+                                <span class="text-cyan-500 text-xl mr-2">🏷️</span>
+                                <span class="text-gray-700 font-semibold">Bundles & Offers</span>
+                            </div>
+                             <div class="absolute bottom-1/3 right-1/4 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                                <span class="text-gray-700 text-lg font-bold">250+ 📈</span>
+                                <span class="text-gray-500 text-sm">Products</span>
+                            </div>
+                            <div class="absolute bottom-1/3 right-1/2 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                                <span class="text-gray-700 text-lg font-bold">Instant 🚀</span>
+                                <span class="text-gray-500 text-sm">Deployment</span>
+                            </div>
+                            <div class="absolute bottom-1/3 left-1/4 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                                <span class="text-gray-700 text-lg font-bold">Version 💾</span>
+                                <span class="text-gray-500 text-sm">Control</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events Tab Content -->
+                <div id="events-content" class="tab-content">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <!-- Left side: Text Content -->
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                                Event-Driven <br> Processing <br> & Analytics
+                            </h3>
+                            <p class="text-gray-600 text-lg">
+                                Process high volumes of events with real-time insights and automation.
+                            </p>
+                        </div>
+                        <!-- Right side: Placeholder Image/Dashboard Mockup -->
+                        <div class="flex justify-center items-center relative">
+                            <img src="https://placehold.co/600x400/e0e0e0/000000?text=Event+Stream" alt="Event Stream Mockup" class="w-full h-auto rounded-lg shadow-xl">
+                            <div class="absolute top-10 right-10 bg-white p-4 rounded-lg shadow-md flex items-center">
+                                <span class="text-teal-500 text-xl mr-2">➡️</span>
+                                <span class="text-gray-700 font-semibold">Event Pipelines</span>
+                            </div>
+                            <div class="absolute bottom-10 left-10 bg-white p-4 rounded-lg shadow-md flex items-center">
+                                <span class="text-indigo-500 text-xl mr-2">💧</span>
+                                <span class="text-gray-700 font-semibold">Data Streams</span>
+                            </div>
+                             <div class="absolute bottom-1/3 right-1/4 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                                <span class="text-gray-700 text-lg font-bold">1M/sec ⚡</span>
+                                <span class="text-gray-500 text-sm">Events</span>
+                            </div>
+                            <div class="absolute bottom-1/3 right-1/2 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                                <span class="text-gray-700 text-lg font-bold">Real-time 🔔</span>
+                                <span class="text-gray-500 text-sm">Alerts</span>
+                            </div>
+                            <div class="absolute bottom-1/3 left-1/4 bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                                <span class="text-gray-700 text-lg font-bold">Anomaly 🚨</span>
+                                <span class="text-gray-500 text-sm">Detection</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom navigation/buttons -->
+            <div class="mt-12 flex flex-wrap justify-center gap-4">
+                <button class="flex items-center px-6 py-3 bg-gray-800 text-white rounded-full font-semibold hover:bg-gray-700 transition duration-300">
+                    PRODUCTS <span class="ml-2">+</span>
+                </button>
+                <button class="flex items-center px-6 py-3 bg-gray-800 text-white rounded-full font-semibold hover:bg-gray-700 transition duration-300">
+                    SOLUTIONS <span class="ml-2">+</span>
+                </button>
+                <button class="flex items-center px-6 py-3 bg-gray-800 text-white rounded-full font-semibold hover:bg-gray-700 transition duration-300">
+                    RESOURCES <span class="ml-2">+</span>
+                </button>
+                <button class="flex items-center px-6 py-3 bg-gray-800 text-white rounded-full font-semibold hover:bg-gray-700 transition duration-300">
+                    SERVICES <span class="ml-2">+</span>
+                </button>
+                <button class="px-6 py-3 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition duration-300">
+                    BOOK A MEETING
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section for the Graph -->
+   
+
+    <!-- New Section for Canvas -->
+    <section class="py-16 px-4 md:px-8 lg:px-16 bg-gray-900 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-white">Interactive Data View</h2>
+        <div class="flex justify-center">
+            <canvas id="myCanvas"></canvas>
+        </div>
+        <p class="mt-4 text-gray-400">This is a placeholder for an interactive chart or data visualization.</p>
+    </section>
+
+    <!-- Customers Section -->
+    <section class="py-16 px-4 md:px-8 lg:px-16 text-center bg-black">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-white">Our Customers</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
+            <!-- Customer logos with names and emojis -->
+            <div class="flex flex-row items-center justify-center h-24 bg-black rounded-lg p-4">
+                <span class="text-white text-3xl mr-2">💡</span>
+                <span class="text-white text-lg font-semibold">Perplexity</span>
+            </div>
+            <div class="flex flex-row items-center justify-center h-24 bg-black rounded-lg p-4">
+                <span class="text-white text-3xl mr-2">🎮</span>
+                <span class="text-white text-lg font-semibold">Supercell</span>
+            </div>
+            <div class="flex flex-row items-center justify-center h-24 bg-black rounded-lg p-4">
+                <span class="text-white text-3xl mr-2">💳</span>
+                <span class="text-white text-lg font-semibold">Monzo</span>
+            </div>
+            <div class="flex flex-row items-center justify-center h-24 bg-black rounded-lg p-4">
+                <span class="text-white text-3xl mr-2">💻</span>
+                <span class="text-white text-lg font-semibold">Raycast</span>
+            </div>
+            <div class="flex flex-row items-center justify-center h-24 bg-black rounded-lg p-4">
+                <span class="text-white text-3xl mr-2">🛠️</span>
+                <span class="text-white text-lg font-semibold">Retool</span>
+            </div>
+            <div class="flex flex-row items-center justify-center h-24 bg-black rounded-lg p-4">
+                <span class="text-white text-3xl mr-2">💰</span>
+                <span class="text-white text-lg font-semibold">Mercury</span>
+            </div>
+            <div class="flex flex-row items-center justify-center h-24 bg-black rounded-lg p-4">
+                <span class="text-white text-3xl mr-2">☁️</span>
+                <span class="text-white text-lg font-semibold">CloudCo</span>
+            </div>
+            <div class="flex flex-row items-center justify-center h-24 bg-black rounded-lg p-4">
+                <span class="text-white text-3xl mr-2">🚀</span>
+                <span class="text-white text-lg font-semibold">RocketLaunch</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
